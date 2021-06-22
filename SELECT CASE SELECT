@@ -1,0 +1,6 @@
+SELECT emp_id,
+CASE
+    WHEN emp_id = 20 THEN (SELECT emp_code AB FROM tb_employee LIMIT 1)
+    ELSE "The quantity is under 30"
+END
+FROM tb_employee;
